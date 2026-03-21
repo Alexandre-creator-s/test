@@ -1253,29 +1253,36 @@ nav { transition: transform .35s cubic-bezier(.4,0,.2,1), background .3s; }
       </div>
     </div>
 
-    <!-- Bloc Veille détaillée — style image 3 -->
-    <div class="veille-detail-layout reveal">
-      <div class="veille-detail-left">
+    <!-- Bloc Veille détaillée -->
+    <div class="xp-layout" style="margin-top:48px">
+      <!-- Gauche : texte -->
+      <div class="xp-left reveal">
         <div class="xp-underline"></div>
-        <h3 class="veille-detail-h">Veille Technologique</h3>
-        <p class="veille-detail-sub">Comprendre et anticiper les évolutions du secteur informatique.</p>
-
-        <h4 class="veille-detail-q">C'est quoi une veille ?</h4>
-        <p class="veille-detail-p">La veille technologique consiste à s'informer de façon systématique sur les dernières innovations, les nouveaux outils et les méthodologies émergentes. Pour un développeur, c'est indispensable pour rester compétitif et proposer des solutions modernes.</p>
-
-        <h4 class="veille-detail-q">Ma méthodologie</h4>
-        <ul class="veille-methodo">
-          <li><span class="veille-methodo-icon">📡</span><div><strong>Flux RSS :</strong> Utilisation de Feedly pour centraliser les blogs tech.</div></li>
-          <li><span class="veille-methodo-icon">🔔</span><div><strong>Alertes :</strong> Google Alerts sur les mots-clés "Python 2025" et "IA".</div></li>
-          <li><span class="veille-methodo-icon">𝕏</span><div><strong>Réseaux :</strong> Suivi de développeurs influents sur Twitter et LinkedIn.</div></li>
+        <p class="xp-intro">
+          La veille technologique consiste à s'informer de façon systématique sur les <strong>dernières innovations</strong>, les nouveaux outils et les méthodologies émergentes. Pour un développeur, c'est indispensable pour rester compétitif et proposer des solutions modernes.
+        </p>
+        <ul class="xp-points">
+          <li class="xp-point">
+            <div class="xp-point-icon">📡</div>
+            <div><strong>Flux RSS :</strong> Utilisation de Feedly pour centraliser les blogs tech et les actualités du secteur.</div>
+          </li>
+          <li class="xp-point">
+            <div class="xp-point-icon">🔔</div>
+            <div><strong>Alertes :</strong> Google Alerts configurées sur les mots-clés "Python 2025", "Rust", "IA" et "BTS SIO".</div>
+          </li>
+          <li class="xp-point">
+            <div class="xp-point-icon">🌐</div>
+            <div><strong>Réseaux :</strong> Suivi de développeurs influents sur Twitter / X et LinkedIn pour capter les tendances en temps réel.</div>
+          </li>
         </ul>
       </div>
-      <div class="veille-detail-right">
-        <div class="veille-acces-card">
-          <div class="veille-acces-icon">🖥️</div>
-          <h3 class="veille-acces-title">Accéder à mes recherches</h3>
-          <p class="veille-acces-desc">Consultez ma page dédiée pour voir les sujets que je suis actuellement et mes synthèses de veille.</p>
-          <a href="veilles.html" class="veille-acces-btn">Consulter ma veille →</a>
+      <!-- Droite : carte accès -->
+      <div class="xp-right reveal">
+        <div class="xp-fiche-card">
+          <div class="xp-fiche-icon">🖥️</div>
+          <h3 class="xp-fiche-title">Accéder à mes recherches</h3>
+          <p class="xp-fiche-desc">Consultez ma page dédiée pour découvrir les sujets que je suis activement et mes synthèses de veille technologique.</p>
+          <a href="veilles.html" class="xp-fiche-btn">Consulter ma veille <span>›</span></a>
         </div>
       </div>
     </div>
