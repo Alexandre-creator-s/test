@@ -1175,7 +1175,7 @@ nav { transition: transform .35s cubic-bezier(.4,0,.2,1), background .3s; }
           <h3 class="proj-title">APPLICATION WEB — Campus HelpDesk</h3>
           <p class="proj-desc">Application web interne de gestion de tickets d interventions informatiques pour le campus.</p>
           <div class="proj-chips"><span class="proj-chip">HTML/CSS</span><span class="proj-chip">PHP</span><span class="proj-chip">JavaScrip</span></div>
-          <a href="https://alexandre-creator.alwaysdata.net/campus-helpdesk/public/index.php?route=login" class="proj-link">Voir le projet →</a>
+          <a href="" class="proj-link">Voir le projet →</a>
         </div>
       </div>
 
@@ -1340,7 +1340,7 @@ nav { transition: transform .35s cubic-bezier(.4,0,.2,1), background .3s; }
           <li><a class="contact-link-item" href="/cdn-cgi/l/email-protection#254449405d444b4157400b42504c4749444c4b654048444c490b464a48"><div class="cl-icon" style="background:#fef2f2">📧</div><div><div class="cl-title">Email</div><div class="cl-sub"><span class="__cf_email__" data-cfemail="91f0fdf4e9f0fff5e3f4bff6e4f8f3fdf0f8ffd1f4fcf0f8fdbff2fefc">[email&#160;protected]</span></div></div></a></li>
           <li><a class="contact-link-item" href="#"><div class="cl-icon" style="background:#eff6ff">💼</div><div><div class="cl-title">LinkedIn</div><div class="cl-sub">linkedin.com/in/alexandre-guiblain</div></div></a></li>
           <li><a class="contact-link-item" href="#"><div class="cl-icon" style="background:var(--bg-soft)">🐙</div><div><div class="cl-title">GitHub</div><div class="cl-sub">github.com/alexandre-guiblain</div></div></a></li>
-          <li><a class="contact-link-item" href="#"><div class="cl-icon" style="background:#f0fdf4">📄</div><div><div class="cl-title">Télécharger mon CV</div><div class="cl-sub">Format PDF — Mis à jour 2025</div></div></a></li>
+          <li><a class="contact-link-item" href="#"><div class="cl-icon" style="background:#f0fdf4">📄</div><div><div class="cl-title">Télécharger mon CV</div><div class="cl-sub">Format PDF — Mis à jour 2026</div></div></a></li>
         </ul>
       </div>
     </div>
@@ -1364,7 +1364,9 @@ nav { transition: transform .35s cubic-bezier(.4,0,.2,1), background .3s; }
       <div class="modal-chips" id="modal-chips"></div>
       <div class="modal-section-title">Fonctionnalités principales</div>
       <ul class="modal-features" id="modal-features"></ul>
-      <a href="" class="btn-primary modal-btn" id="modal-link" target="_blank">🔗 Voir le projet</a>
+      <a id="modal-site-btn" href="#" target="_blank" class="btn-primary modal-btn" style="text-decoration: none;">
+    <span>🌐</span> Voir le site du projet
+</a>
     </div>
     <button class="modal-close" id="modal-close">✕</button>
   </div>
@@ -1547,53 +1549,73 @@ const modalData = {
     title:'SITE INTERNET — Koo Fourchette',
     desc:'Site communautaire de recettes de cuisine réalisé en binôme en 1ère année de BTS SIO SLAM. Les utilisateurs peuvent déposer, consulter et noter des recettes, tandis que l\'administrateur gère les menus du jour et les contenus du site.',
     chips:['HTML/CSS','PHP','MySQL','Bootstrap','Oracle VirtualBox'],
-    features:['Affichage dynamique des recettes par catégorie','Gestion des menus du jour par l\'administrateur','Système de commentaires et notes','Interface responsive mobile/desktop','Panel admin sécurisé avec authentification']
+    features:['Affichage dynamique des recettes par catégorie','Gestion des menus du jour par l\'administrateur','Système de commentaires et notes','Interface responsive mobile/desktop','Panel admin sécurisé avec authentification'],
+    siteLink: ''
   },
   'site-internet-resto': {
     emoji:'🍕', period:'Octobre à Novembre 2025',
     title:'SITE INTERNET — Resto Campus',
     desc:'Application web de réservation de repas pour le restaurant du campus. Les étudiants réservent leur repas en ligne et la gestionnaire suit les commandes en temps réel depuis un tableau de bord administrateur.',
     chips:['PHP','MySQL','JavaScript','Bootstrap','HTML/CSS','PDO'],
-    features:['Authentification par rôles (gestionnaire / étudiant)','Réservation en ligne dans la limite des stocks disponibles','Tableau de bord temps réel des commandes du jour','Marquage des commandes récupérées par la gestionnaire','Statistiques de fin de service (par article, par étudiant)','Historique personnel des commandes pour chaque étudiant']
+    features:['Authentification par rôles (gestionnaire / étudiant)','Réservation en ligne dans la limite des stocks disponibles','Tableau de bord temps réel des commandes du jour','Marquage des commandes récupérées par la gestionnaire','Statistiques de fin de service (par article, par étudiant)','Historique personnel des commandes pour chaque étudiant'],
+    siteLink: 'https://alexandre-creator.alwaysdata.net/'
   },
   'valorisens': {
     emoji:'🏛️', period:'Mai à Juillet 2025',
     title:'Stage 1er année — Valorisens',
     desc:'Refonte complète du site internet de Valorisens, structure spécialisée dans la formation et le bien-être (Snoezelen, communication gestuelle, parentalité). Mission réalisée en autonomie lors de mon stage de 1ère année BTS SIO en Teletravaille.',
     chips:['WordPress','Elementor','Plugins WP','HTML/CSS'],
-    features:['Refonte complète de la page d accueil avec mise en avant des services','Création de pages dédiées par formation (Snoezelen, SAP, gestion du stress)','Intégration d un formulaire de contact fonctionnel','Tests sur environnement de recette avant mise en production','Gestion du contenu via l administration WordPress']
+    features:['Refonte complète de la page d accueil avec mise en avant des services','Création de pages dédiées par formation (Snoezelen, SAP, gestion du stress)','Intégration d un formulaire de contact fonctionnel','Tests sur environnement de recette avant mise en production','Gestion du contenu via l administration WordPress'],
+    siteLink: 'https://valorisens.fr/'
   },
   'stock': {
     emoji:'📦', period:'Octobre 2025 à Mars 2026',
     title:'APPLICATION WEB — SEF Escrime',
     desc:'Webapp de gestion de club sportif développée avec Symfony 7.1 pour la M2L (Maison des Ligues de Lorraine). Permet aux adhérents de suivre leurs performances, aux entraîneurs de gérer les équipes et à l\'administration de piloter le club.',
     chips:['Symfony 7.1','PHP','MySQL',' Twig','JavaScript','Bootstrap','Doctrine ORM'],
-    features:['3 interfaces dédiées : Sportif, Animateur (entraîneur) et Administrateur','Suivi des performances et objectifs sportifs individuels','Gestion des compétitions, inscriptions et planification','Indice de performance calculé selon compétences et résultats en compétition','Authentification sécurisée avec gestion RGPD']
+    features:['3 interfaces dédiées : Sportif, Animateur (entraîneur) et Administrateur','Suivi des performances et objectifs sportifs individuels','Gestion des compétitions, inscriptions et planification','Indice de performance calculé selon compétences et résultats en compétition','Authentification sécurisée avec gestion RGPD'],
+    siteLink: ''
   },
   'quiz': {
     emoji:'📱', period:'Janvier à Février 2026',
     title:'Stage 2ème année — Site Mairie',
     desc:'Interface web de gestion municipale développée en parallèle de mon stage à la DSI de la Mairie de Savigny-le-Temple. Simule un système d\'information pour une mairie avec tableau de bord, gestion de tickets, agenda et administration des services.',
     chips:['HTML/CSS','PHP','MySQL','Bootstrap','UwAmp'],
-    features:['Tableau de bord principal avec file d attente en temps réel','Gestion des tickets citoyens par service et bureau','Agenda des rendez-vous et accueil citoyen ','Gestion des services municipaux (État Civil, DSI, Travaux Urbains…)','Recensement et suivi des citoyens']
+    features:['Tableau de bord principal avec file d attente en temps réel','Gestion des tickets citoyens par service et bureau','Agenda des rendez-vous et accueil citoyen ','Gestion des services municipaux (État Civil, DSI, Travaux Urbains…)','Recensement et suivi des citoyens'],
+    siteLink: ''
   },
   'dashboard': {
     emoji:'📊', period:'Février à Mars 2026',
     title:'APPLICATION WEB — Campus HelpDesk',
     desc:'Application web interne de gestion de tickets d\'interventions informatiques pour le campus. Les étudiants déclarent leurs incidents (panne, Wi-Fi, matériel) et les techniciens les prennent en charge avec un suivi complet de l\'état des demandes.',
     chips:['PHP','MySQL','HTML/CSS','Bootstrap','JavaScript','PDO'],
-    features:['Authentification par rôles (Étudiant / Technicien / Admin)','Création de tickets avec titre, catégorie et priorité','Suivi du statut en temps réel (OPEN → IN_PROGRESS → RESOLVED → CLOSED)','Filtres par statut et priorité pour les techniciens','Contrôle d accès strict (étudiant limité à ses propres tickets)']
-  }
+    features:['Authentification par rôles (Étudiant / Technicien / Admin)','Création de tickets avec titre, catégorie et priorité','Suivi du statut en temps réel (OPEN → IN_PROGRESS → RESOLVED → CLOSED)','Filtres par statut et priorité pour les techniciens','Contrôle d accès strict (étudiant limité à ses propres tickets)'],
+    siteLink: 'https://alexandre-creator.alwaysdata.net/campus-helpdesk/public/index.php?route=login'
+  }           
 };
 
 function openModal(key) {
-  const d = modalData[key]; if (!d) return;
+  const d = modalData[key]; 
+  if (!d) return;
+
   document.getElementById('modal-emoji').textContent = d.emoji;
   document.getElementById('modal-period').textContent = d.period;
   document.getElementById('modal-title').textContent = d.title;
   document.getElementById('modal-desc').textContent = d.desc;
   document.getElementById('modal-chips').innerHTML = d.chips.map(c=>`<span class="modal-chip">${c}</span>`).join('');
   document.getElementById('modal-features').innerHTML = d.features.map(f=>`<li class="modal-feature"><div class="modal-feature-dot">✓</div>${f}</li>`).join('');
+
+  // --- PARTIE MODIFIÉE POUR LE LIEN ---
+  const btnSite = document.querySelector('.modal-box .btn-primary'); // On cible le bouton de la modale
+  if (btnSite && d.siteLink) {
+    btnSite.href = d.siteLink; // On donne le lien individuel
+    btnSite.target = "_blank"; // Pour ouvrir dans un nouvel onglet
+    btnSite.style.display = "inline-flex"; // On l'affiche
+  } else if (btnSite) {
+    btnSite.style.display = "none"; // On cache le bouton s'il n'y a pas de lien
+  }
+  // ------------------------------------
+
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
