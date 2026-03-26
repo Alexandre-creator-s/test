@@ -277,6 +277,27 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
   font-size: 11px; font-weight: 800; flex-shrink: 0; margin-top: 1px;
 }
 
+/* ── BOUTON RAPPORT DANS MODAL ── */
+.modal-footer {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1.5px solid var(--border);
+  text-align: center;
+}
+.report-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--blue); color: #fff;
+  padding: 14px 28px; border-radius: 12px;
+  font-size: 14px; font-weight: 700;
+  text-decoration: none; transition: all .25s;
+  box-shadow: 0 4px 12px rgba(59, 63, 168, 0.2);
+}
+.report-btn:hover {
+  background: var(--blue-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 63, 168, 0.3);
+}
+
 /* ── FOOTER ── */
 .page-footer {
   background: var(--text); color: #94a3b8;
@@ -321,14 +342,12 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
 
 <div id="pbar"></div>
 
-<!-- TOP BAR -->
 <div class="topbar" id="topbar">
   <a href="index.html" class="back-btn">← Retour au portfolio</a>
   <span class="topbar-title">Mes Stages · Alexandre Guiblain</span>
   <button class="theme-toggle" id="theme-toggle">🌙</button>
 </div>
 
-<!-- PAGE HEADER -->
 <header class="page-header">
   <div class="page-tag"><span class="page-tag-dot"></span> BTS SIO SLAM · 2024–2026</div>
   <h1 class="page-h1">Mes Stages en Entreprise</h1>
@@ -340,14 +359,12 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
   </div>
 </header>
 
-<!-- TIMELINE ALTERNÉE -->
 <section class="tl-section">
   <div class="tl-section-inner">
     <div class="tl-section-title">Parcours chronologique</div>
 
     <div class="timeline-alt">
 
-      <!-- Stage 1 : GAUCHE — Valorisens -->
       <div class="tla-item right">
         <div class="tla-empty"></div>
         <div class="tla-dot-wrap"><div class="tla-dot"></div></div>
@@ -367,7 +384,6 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
         </div>
       </div>
 
-      <!-- Stage 2 : DROITE — Mairie -->
       <div class="tla-item left">
         <div class="tla-card" data-modal="mairie">
           <div class="tla-card-icon">🏛️</div>
@@ -391,7 +407,6 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
   </div>
 </section>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal-box">
     <button class="modal-close" id="modal-close">✕</button>
@@ -406,11 +421,16 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
       <div class="modal-chips" id="m-chips"></div>
       <div class="modal-section">Missions réalisées</div>
       <ul class="modal-missions" id="m-missions"></ul>
+      
+      <div class="modal-footer">
+        <a href="#" id="m-report-link" class="report-btn" target="_blank">
+          📄 Consulter le rapport de stage (PDF)
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer class="page-footer">
   <div>Alexandre Guiblain — BTS SIO SLAM · 2024–2026</div>
   <a href="index.html">← Retour au portfolio</a>
@@ -467,13 +487,14 @@ const modals = {
       'Correction de bugs d\'affichage et de navigation',
       'Validation des modifications sur un site de test avant mise en ligne',
       'Participation aux réunions d\'avancement et de suivi de projet'
-    ]
+    ],
+    report: 'pdf/rapport-valorisens.pdf' // CHEMIN VERS TON PDF
   },
   mairie: {
     icon: '🏛️', period: 'JAN – FÉV 2026',
     title: 'Mairie de Savigny-le-Temple', role: 'Technicien Support & Développeur — Stage SIO 2ème année',
     desc: 'Immersion au cœur du service informatique d\'une collectivité territoriale. J\'ai assuré le maintien en condition opérationnelle du parc informatique tout en développant une interface centralisée pour optimiser le travail quotidien des agents de la DSI.',
-    chips: ['GLPI (Ticketing)', 'Active Directory', 'HTML/CSS/JS/PHP (MairieOS)'],
+    chips: ['GLPI (Ticketing)', 'Active Directory', 'HTML/CSS/JS (MairieOS)'],
     missions: [
       'Assistance technique et support aux agents de la mairie',
       'Préparation et déploiement de postes informatiques (Masterisation)',
@@ -481,7 +502,8 @@ const modals = {
       'Développement de l\'application "MairieOS" (Portail d\'outils DSI)',
       'Maintenance matérielle (Remplacement d\'écrans, claviers, composants)',
       'Brassage réseau et brassage de prises RJ45 en armoire technique'
-    ]
+    ],
+    report: 'pdf/rapport-mairie.pdf' // CHEMIN VERS TON PDF
   }
 };
 
@@ -494,6 +516,10 @@ function openModal(key) {
   document.getElementById('m-desc').textContent = d.desc;
   document.getElementById('m-chips').innerHTML = d.chips.map(c => `<span class="modal-chip">${c}</span>`).join('');
   document.getElementById('m-missions').innerHTML = d.missions.map(m => `<li class="modal-mission"><div class="modal-mission-dot">✓</div>${m}</li>`).join('');
+  
+  // Mise à jour du lien du rapport
+  document.getElementById('m-report-link').href = d.report;
+  
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
