@@ -335,7 +335,7 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
   <p class="page-sub">Détail des missions réalisées durant mon parcours en BTS SIO.</p>
   <div class="stats-row">
     <div class="stat-item"><div class="stat-num">2</div><div class="stat-lbl">Stages effectués</div></div>
-    <div class="stat-item"><div class="stat-num">14</div><div class="stat-lbl">Semaines de stage</div></div>
+    <div class="stat-item"><div class="stat-num">11</div><div class="stat-lbl">Semaines de stage</div></div>
     <div class="stat-item"><div class="stat-num">10+</div><div class="stat-lbl">Missions réalisées</div></div>
   </div>
 </header>
@@ -357,11 +357,11 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
           <h3 class="tla-company">Valorisens</h3>
           <p class="tla-role">Développeur Web (SIO 1)</p>
           <div class="tla-divider"></div>
-          <p class="tla-desc">Stage de 1ère année axé sur le développement web. Participation à la création d'interfaces et à l'optimisation des outils internes.</p>
+          <p class="tla-desc">Stage de 1re année centré sur la refonte complète du site internet de l'organisme. Amélioration de l'interface utilisateur et de la gestion des contenus pédagogiques</p>
           <ul class="tla-tasks">
-            <li class="tla-task"><div class="tla-task-check">✓</div>Développement de nouvelles fonctionnalités en PHP/MySQL</li>
-            <li class="tla-task"><div class="tla-task-check">✓</div>Optimisation et correction de requêtes SQL</li>
-            <li class="tla-task"><div class="tla-task-check">✓</div>Rédaction de documentation technique</li>
+            <li class="tla-task"><div class="tla-task-check">✓</div>Refonte intégrale du site vitrine sous WordPress</li>
+            <li class="tla-task"><div class="tla-task-check">✓</div>Optimisation de l'ergonomie et du responsive design</li>
+            <li class="tla-task"><div class="tla-task-check">✓</div>Intégration de nouvelles fonctionnalités et contenus</li>
           </ul>
           <button class="detail-btn" onclick="openModal('valorisens')">Détails</button>
         </div>
@@ -372,14 +372,14 @@ body { font-family: var(--font); color: var(--text); background: var(--bg); over
         <div class="tla-card" data-modal="mairie">
           <div class="tla-card-icon">🏛️</div>
           <span class="tla-period">JAN – FÉV 2026</span>
-          <h3 class="tla-company">Mairie de Savigny</h3>
-          <p class="tla-role">Assistant Informatique (SIO 2)</p>
+          <h3 class="tla-company">Mairie de Savigny-le-Temple</h3>
+          <p class="tla-role">Technicien Support & Développeur (SIO 2)</p>
           <div class="tla-divider"></div>
-          <p class="tla-desc">Stage de 2ème année au sein du service informatique d'une mairie. Participation à la conception d'une application de gestion des données municipales.</p>
+          <p class="tla-desc">Stage de 2ème année au sein de la Direction des Systèmes d'Information (DSI). Missions polyvalentes entre le support utilisateur de proximité et le développement d'outils internes.</p>
           <ul class="tla-tasks">
-            <li class="tla-task"><div class="tla-task-check">✓</div>Conception BDD avec méthode Merise (MCD/MPD)</li>
-            <li class="tla-task"><div class="tla-task-check">✓</div>Développement d'une API REST Python Flask</li>
-            <li class="tla-task"><div class="tla-task-check">✓</div>Déploiement sur serveur Linux Apache</li>
+            <li class="tla-task"><div class="tla-task-check">✓</div>Maintenance et gestion du parc informatique</li>
+            <li class="tla-task"><div class="tla-task-check">✓</div>Assistance et dépannage technique aux utilisateurs</li>
+            <li class="tla-task"><div class="tla-task-check">✓</div>Développement d'une application interne (MairieOS)</li>
           </ul>
           <button class="detail-btn" onclick="openModal('mairie')">Détails</button>
         </div>
@@ -458,30 +458,29 @@ const modals = {
   valorisens: {
     icon: '💻', period: 'MAI – JUIN 2025',
     title: 'Valorisens', role: 'Développeur Web — Stage SIO 1ère année',
-    desc: 'Stage de 6 semaines au sein de Valorisens. J\'ai participé activement au développement d\'outils internes et d\'interfaces web. Ce stage m\'a permis de mettre en pratique mes connaissances en PHP, MySQL et JavaScript dans un contexte professionnel réel.',
-    chips: ['PHP', 'MySQL', 'JavaScript', 'HTML/CSS', 'Bootstrap', 'Git'],
+    desc: 'Stage de 6 semaines au sein d\'un organisme spécialisé dans l\'approche sensorielle. Ma mission principale était de moderniser la plateforme web pour faciliter la gestion interne et l\'accès aux formations.',
+    chips: ['WordPress', 'Elementor Pro', 'JetPlugins', 'Environnement de test (Pré-production)'],
     missions: [
-      'Développement de nouvelles fonctionnalités sur l\'intranet de l\'entreprise',
-      'Optimisation et correction de requêtes SQL pour améliorer les performances',
-      'Création d\'une interface de gestion des congés en PHP/MySQL',
-      'Participation aux réunions d\'équipe et daily stand-up AGILE',
-      'Rédaction de la documentation technique des fonctionnalités développées',
-      'Corrections de bugs et tests unitaires sur les modules existants'
+      'Refonte complète du site internet avec WordPress et Elementor',
+      'Création de pages spécifiques (Accueil, Contact, Formations)',
+      'Optimisation de l\'affichage sur tablettes et smartphones (Responsive)',
+      'Correction de bugs d\'affichage et de navigation',
+      'Validation des modifications sur un site de test avant mise en ligne',
+      'Participation aux réunions d\'avancement et de suivi de projet'
     ]
   },
   mairie: {
     icon: '🏛️', period: 'JAN – FÉV 2026',
-    title: 'Mairie de Savigny', role: 'Assistant Informatique — Stage SIO 2ème année',
-    desc: 'Stage de 8 semaines au service informatique de la Mairie de Savigny. Mission principale : concevoir et développer une application de gestion des données municipales de A à Z, en autonomie sous la supervision du responsable IT.',
-    chips: ['Python', 'Flask', 'MySQL', 'React.js', 'Chart.js', 'Linux', 'Apache', 'Merise'],
+    title: 'Mairie de Savigny-le-Temple', role: 'Technicien Support & Développeur — Stage SIO 2ème année',
+    desc: 'Immersion au cœur du service informatique d\'une collectivité territoriale. J\'ai assuré le maintien en condition opérationnelle du parc informatique tout en développant une interface centralisée pour optimiser le travail quotidien des agents de la DSI.',
+    chips: ['GLPI (Ticketing)', 'Active Directory', 'HTML/CSS/JS (MairieOS)'],
     missions: [
-      'Analyse des besoins avec les équipes métiers de la mairie',
-      'Conception de la base de données avec la méthode Merise (MCD/MPD)',
-      'Développement d\'une API REST en Python Flask',
-      'Intégration du frontend en React.js avec graphiques interactifs (Chart.js)',
-      'Déploiement de l\'application sur un serveur Linux (Apache)',
-      'Formation des agents municipaux à l\'utilisation de l\'outil',
-      'Rédaction du guide utilisateur et de la documentation technique'
+      'Assistance technique et support aux agents de la mairie',
+      'Préparation et déploiement de postes informatiques (Masterisation)',
+      'Gestion des incidents et des demandes via l\'outil GLPI',
+      'Développement de l\'application "MairieOS" (Portail d\'outils DSI)',
+      'Maintenance matérielle (Remplacement d\'écrans, claviers, composants)',
+      'Brassage réseau et brassage de prises RJ45 en armoire technique'
     ]
   }
 };
